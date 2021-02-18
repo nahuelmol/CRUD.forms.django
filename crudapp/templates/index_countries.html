@@ -1,0 +1,21 @@
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-1 col-xs-1 col-sm-1"></div>
+        <div class="col-md-7 col-xs-7 col-sm-7">
+            <ul class="list-group">
+                {% for country in countries_list %}
+
+                <li class="list-group-item ">
+                    <p>{{ country.Name }}</p><span class="badge"></span>
+                    <a href="{% url 'detail_country' country.pk %}">Go</a>
+                </li>
+                {% endfor %}
+            </ul>
+            <br>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1"></div>
+    </div>
+    <button class="btn btn-primary"><a href="{% url 'country_create' %}">Create New</a></button>
+
+{% endblock %}

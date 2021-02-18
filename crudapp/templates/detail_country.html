@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div>
+	<h1>HI </h1>
+	<h2>
+	{{ country.Name }}
+	{{ country.temperature_winter }}
+	{{ country.temperature_summer }}
+	</h2>
+	<a href="{% url 'index_countries' %}">Countries's list</a>
+</div>
+
+{% endblock %}
